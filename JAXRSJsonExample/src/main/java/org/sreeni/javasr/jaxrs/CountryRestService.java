@@ -12,7 +12,7 @@ import javax.ws.rs.core.MediaType;
  
 
 /* 
- * author: Arpit Mandliya
+ * author: Sreeni
  * */
 @Path("/countries")
 public class CountryRestService {
@@ -32,7 +32,7 @@ public class CountryRestService {
     @Produces(MediaType.APPLICATION_JSON)
  public Country getCountryById(@PathParam("id") int id)
  {
-  List listOfCountries = createCountryList();
+  List<Country> listOfCountries = createCountryList();
  
   for (Country country1 : listOfCountries) {
    if(country1.getId()==id)
